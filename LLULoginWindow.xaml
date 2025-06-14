@@ -1,0 +1,47 @@
+﻿<ui:SHMetroWindow  xmlns:ui="clr-namespace:SimHub.Plugins.UI;assembly=SimHub.Plugins" x:Class="KatePolak.SimHubGlucose.LLULoginWindow"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:local="clr-namespace:KatePolak.SimHubGlucose"
+                    xmlns:styles="clr-namespace:SimHub.Plugins.Styles;assembly=SimHub.Plugins"
+                    mc:Ignorable="d" 
+                    Title="LibreLinkUp setup"
+                    Background="Black"
+                    Height="350" Width="350"
+                    d:DesignHeight="350" d:DesignWidth="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Foreground="White" TextWrapping="Wrap" Margin="5">
+            The email and password will be stored locally to refresh the login every 6 months as required by the LibreLinkUp service, they will be encrypted for safety
+        </TextBlock>
+
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Email:</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5,0" VerticalAlignment="Center" Height="25" x:Name="emailBox"></TextBox>
+
+        <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Password:</Label>
+        <PasswordBox Grid.Row="2" Grid.Column="1" Margin="5,0" VerticalAlignment="Center" Height="25" x:Name="passwordBox"></PasswordBox>
+
+        <styles:SHButtonPrimary Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="LoginClick">Log in</styles:SHButtonPrimary>
+
+        <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Patient:</Label>
+        <ComboBox Grid.Row="4" Grid.Column="1" Margin="5,0" VerticalAlignment="Center" Height="25" x:Name="patientSelect" ItemsSource="{Binding Path=Patients}" IsEnabled="False"></ComboBox>
+
+        <styles:SHButtonPrimary Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="PatientSelect">Select patient and confirm</styles:SHButtonPrimary>
+
+        <Label Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="resultLabel"></Label>
+    </Grid>
+</ui:SHMetroWindow>
