@@ -2,18 +2,18 @@
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 
-namespace KatePolak.SimHubGlucose {
+namespace KatePolak.GlucoseForSimHub {
 
     public partial class SettingsControl : UserControl {
 
-        public SimHubGlucosePlugin Plugin { get; }
+        public GlucoseForSimHubPlugin Plugin { get; }
 
         public SettingsControl() {
             InitializeComponent();
             DataContext = this;
         }
 
-        public SettingsControl(SimHubGlucosePlugin plugin) : this() {
+        public SettingsControl(GlucoseForSimHubPlugin plugin) : this() {
             Plugin = plugin;
 
             SourceComboBox.ItemsSource = GlucoseSource.Sources;

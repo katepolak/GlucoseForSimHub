@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KatePolak.SimHubGlucose.Properties {
+namespace KatePolak.GlucoseForSimHub.Properties {
     using System;
     
     

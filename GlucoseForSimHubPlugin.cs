@@ -6,12 +6,12 @@ using System.Runtime.CompilerServices;
 using System.Timers;
 using System.Windows.Media;
 
-namespace KatePolak.SimHubGlucose {
+namespace KatePolak.GlucoseForSimHub {
 
     [PluginDescription("Connects to your smart glucose sensors and allows you to use the measured values anywhere within SimHub")]
     [PluginAuthor("Kate Polak")]
     [PluginName("Glucose connector")]
-    public class SimHubGlucosePlugin : IPlugin, IWPFSettingsV2, INotifyPropertyChanged {
+    public class GlucoseForSimHubPlugin : IPlugin, IWPFSettingsV2, INotifyPropertyChanged {
 
         public class SimHubGlucosePluginSettings : INotifyPropertyChanged {
 

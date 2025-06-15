@@ -10,7 +10,7 @@ using WoteverCommon;
 using System.Timers;
 using System.Globalization;
 
-namespace KatePolak.SimHubGlucose {
+namespace KatePolak.GlucoseForSimHub {
 
     /// <summary>
     /// 
@@ -106,7 +106,7 @@ namespace KatePolak.SimHubGlucose {
             return n ^ 0x42424242;
         }
 
-        public LibreLinkUpAPI(SimHubGlucosePlugin plugin) : base(plugin) {
+        public LibreLinkUpAPI(GlucoseForSimHubPlugin plugin) : base(plugin) {
 
             var settings = _plugin.ReadSettings("LLUSettings", () => new LLUSettings());
 

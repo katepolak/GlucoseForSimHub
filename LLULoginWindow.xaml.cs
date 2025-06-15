@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows;
 using WoteverCommon.Extensions;
 
-namespace KatePolak.SimHubGlucose {
+namespace KatePolak.GlucoseForSimHub {
     public partial class LLULoginWindow : SHMetroWindow {
 
         private readonly LibreLinkUpAPI _lluAPI;

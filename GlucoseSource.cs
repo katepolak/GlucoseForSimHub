@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-namespace KatePolak.SimHubGlucose {
+namespace KatePolak.GlucoseForSimHub {
 
     public abstract class GlucoseSource : INotifyPropertyChanged {
 
@@ -16,7 +16,7 @@ namespace KatePolak.SimHubGlucose {
         public struct GlucoseSourceInfo {
             public string ID;
             public string DisplayName;
-            public Func<SimHubGlucosePlugin, GlucoseSource> Factory;
+            public Func<GlucoseForSimHubPlugin, GlucoseSource> Factory;
 
             public override string ToString() {
                 return DisplayName;
@@ -42,7 +42,7 @@ namespace KatePolak.SimHubGlucose {
         #endregion
 
         private string _status;
-        protected SimHubGlucosePlugin _plugin;
+        protected GlucoseForSimHubPlugin _plugin;
 
         /// <summary>
         /// An arbitrary user friendly source status description
@@ -58,13 +58,13 @@ namespace KatePolak.SimHubGlucose {
         /// <summary>
         /// Initialize the source
         /// </summary>
-        /// <param name="plugin">Primarily used to access <see cref="SimHubGlucosePlugin.ReadSettings{T}(string, Func{T})"/> and <see cref="SimHubGlucosePlugin.WriteSettings{T}(string, T)"/></param>
-        public GlucoseSource(SimHubGlucosePlugin plugin) {
+        /// <param name="plugin">Primarily used to access <see cref="GlucoseForSimHubPlugin.ReadSettings{T}(string, Func{T})"/> and <see cref="GlucoseForSimHubPlugin.WriteSettings{T}(string, T)"/></param>
+        public GlucoseSource(GlucoseForSimHubPlugin plugin) {
             _plugin = plugin;
         }
 
         /// <summary>
-        /// Called before the entire plugin is unloaded, should save all settings using <see cref="SimHubGlucosePlugin.WriteSettings{T}(string, T)"/>
+        /// Called before the entire plugin is unloaded, should save all settings using <see cref="GlucoseForSimHubPlugin.WriteSettings{T}(string, T)"/>
         /// </summary>
         public abstract void End();
 
